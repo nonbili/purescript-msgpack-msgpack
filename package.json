@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "build": "pulp build -I test -- --strict --stash +RTS -N2 -RTS",
+    "postinstall": "bower install",
+    "test": "pulp build -I test && jest"
+  },
   "devDependencies": {
     "@msgpack/msgpack": "^1.2.1",
     "jest": "^24.8.0"

@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@msgpack/msgpack": "^1.2.1",
+    "jest": "^24.8.0"
+  }
+}

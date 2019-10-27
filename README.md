@@ -6,3 +6,10 @@
 A PureScript wrapper of [@msgpack/msgpack](https://www.npmjs.com/package/@msgpack/msgpack).
 
 Check `test` folder to see how to use.
+
+## Development
+
+```
+pulp -w build -I test
+yarn jest --watch
+```

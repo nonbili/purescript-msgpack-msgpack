@@ -34,17 +34,13 @@ function decode(left, right, arr) {
   }
 }
 
-exports.encode_ = json => {
-  const encoded = msgpack.encode(json);
-  return encoded.buffer.slice(encoded.byteOffset, encoded.byteLength);
-};
+exports.encode_ = msgpack.encode;
 
 exports.encodeToString_ = function(json) {
   return uint8ArrayToString(msgpack.encode(json));
 };
 
-exports.decode_ = left => right => buffer =>
-  decode(left, right, new Uint8Array(buffer));
+exports.decode_ = left => right => arr => decode(left, right, arr);
 
 exports.decodeString_ = left => right => str => {
   const arr = stringToUint8Array(str);

@@ -7,7 +7,7 @@ function uint8ArrayToString(arr) {
     return String.fromCharCode.apply(null, arr);
   }
 
-  const result = "";
+  let result = "";
   const arrLen = arr.length;
   for (let i = 0; i < arrLen; i++) {
     const chunk = arr.subarray(i * CHUNK_SIZE, (i + 1) * CHUNK_SIZE);

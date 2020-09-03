@@ -10,6 +10,7 @@ Check `test` folder to see how to use.
 ## Development
 
 ```
-pulp -w build -I test
+yarn
+yarn build
 yarn jest --watch
 ```

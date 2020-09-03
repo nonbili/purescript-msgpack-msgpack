@@ -10,21 +10,20 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - deps-{{ checksum "bower.json" }}-{{ checksum "package.json" }}
+          - deps-{{ checksum "packages.dhall" }}-{{ checksum "package.json" }}
 
       - run:
           command: |
-            yarn add --dev bower purescript pulp purescript-psa
+            yarn add --dev purescript spago
             yarn build
             git checkout -- package.json
 
       - save_cache:
           paths:
             - node_modules
-            - bower_components
             - output
             - .psa-stash
-          key: deps-{{ checksum "bower.json" }}-{{ checksum "package.json" }}
+          key: deps-{{ checksum "packages.dhall" }}-{{ checksum "package.json" }}
 
       - run:
           command: yarn jest

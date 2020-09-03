@@ -1,11 +1,11 @@
 {
   "scripts": {
-    "build": "pulp build -I test -- --strict --stash +RTS -N2 -RTS",
-    "postinstall": "bower install",
-    "test": "pulp build -I test && jest"
+    "build": "spago build -u '--strict --stash +RTS -N2 -RTS'",
+    "test": "spago build && jest"
   },
   "devDependencies": {
     "@msgpack/msgpack": "^1.9.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "purescript-psa": "^0.7.3"
   }
 }

@@ -1,13 +1,19 @@
 { name = "msgpack-msgpack"
 , dependencies =
-  [ "argonaut-codecs"
+  [ "aff"
+  , "argonaut-codecs"
+  , "argonaut-core"
   , "arraybuffer"
   , "arraybuffer-types"
-  , "debug"
+  , "arrays"
+  , "bifunctors"
   , "effect"
+  , "either"
   , "exceptions"
-  , "jest"
-  , "psci-support"
+  , "prelude"
+  , "spec"
+  , "strings"
+  , "uint"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]

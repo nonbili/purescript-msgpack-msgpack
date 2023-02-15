@@ -26,4 +26,4 @@ jobs:
           key: deps-{{ checksum "packages.dhall" }}-{{ checksum "package.json" }}
 
       - run:
-          command: yarn jest
+          command: yarn spago test

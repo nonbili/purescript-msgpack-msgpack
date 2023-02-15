@@ -12,5 +12,5 @@ Check `test` folder to see how to use.
 ```
 yarn
 yarn build
-yarn jest --watch
+yarn spago test --watch
 ```
